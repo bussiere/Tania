@@ -126,7 +126,11 @@ INSTALLED_APPS = (
     'texte',
     'todo',
     'utilisateur',
-    
+    'page',
+    'south',
+    'presentation',
+    'lien',
+    'visibilite',
     
     
 )

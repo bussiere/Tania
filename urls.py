@@ -14,6 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^note/(?P<logouts>\w{0,50})/$', 'note.views.index'),
-    url(r'^note/', 'note.views.index'),
+    url(r'^note/(?P<logouts>\w{0,50})/$', 'page.views.noteindex'),
+    url(r'^note/', 'page.views.noteindex'),
 )

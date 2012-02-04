@@ -29,25 +29,94 @@ class Telephone(Document):
     
     
 
+class Type_Email(Document):
+    Nom = StringProperty(required=True)
+    
+    
+class Email(Document):
+    Email = StringProperty(required=True)
+    Type = ListProperty()
+
+
+class Rue(Document):
+    Nom = StringProperty()
+    Creation = DateTimeProperty(default=datetime.utcnow)
+    Tags = ListProperty()
+    Lien = ListProperty()
+    Metro = ListProperty()
+    GpsLiens =  ListProperty()
+    GeoHash = ListProperty()
+    
+class CP(Document):
+    CP = StringProperty()
+    Creation = DateTimeProperty(default=datetime.utcnow)
+    Tags = ListProperty()
+    Lien = ListProperty()
+    Metro = ListProperty()
+    GpsLiens =  ListProperty()
+    GeoHash = ListProperty() 
+
+class Ville(Document):
+    Ville = StringProperty()
+    Creation = DateTimeProperty(default=datetime.utcnow)
+    Tags = ListProperty()
+    Lien = ListProperty()
+    Metro = ListProperty()
+    GpsLiens =  ListProperty()
+    GeoHash = ListProperty()   
+    
+class Region(Document):
+    Region = StringProperty()
+    Creation = DateTimeProperty(default=datetime.utcnow)
+    Tags = ListProperty()
+    Lien = ListProperty()
+    Metro = ListProperty()
+    GpsLiens =  ListProperty()
+    GeoHash = ListProperty()   
+
+class Pays(Document):
+    Pays = StringProperty()
+    Creation = DateTimeProperty(default=datetime.utcnow)
+    Tags = ListProperty()
+    Lien = ListProperty()
+    Metro = ListProperty()
+    GpsLiens =  ListProperty()
+    GeoHash = ListProperty()  
+  
 class Adresse(Document):
     Nom = StringProperty(required=True)
-    AD1 = StringProperty()
+    Numero = StringProperty()
+    Rue = ListProperty()
     AD2 = StringProperty()
     AD3 = StringProperty()
     AD4 = StringProperty()
     AD5 = StringProperty()
     AD6 = StringProperty()
+    CP = ListProperty()
+    Ville = ListProperty()
+    Region = ListProperty()
+    Pays = ListProperty()
     Creation = DateTimeProperty(default=datetime.utcnow)
     Tags = ListProperty()
-    Membre = ListProperty()
     Lien = ListProperty()
     Metro = ListProperty()
     GpsLiens =  ListProperty()
     GeoHash = ListProperty()
-    Private = BooleanProperty()
-    Note = StringProperty(required=True)
+    
     def ___str__(self):
         return self.Nom
     def __unicode__(self):
         return self.Nom
+    
+class Contact(Document):
+    Nom = StringProperty(required=True)
+    Adresse = ListProperty()
+    Horaire = ListProperty()
+    Tags = ListProperty()
+    Private = BooleanProperty()
+    Note = ListProperty()
+    Creation = DateTimeProperty(default=datetime.utcnow)
+    Email = ListProperty()
+    Telephone = ListProperty()
+    Horaire = ListProperty()
 # Create your models here.

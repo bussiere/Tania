@@ -108,6 +108,24 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+COUCHDB_DATABASES = (
+     ('Tania.Budget', 'http://127.0.0.1:5984/Budget'),
+     ('Tania.Calendar', 'http://127.0.0.1:5984/Calendar'),
+     ('Tania.Document', 'http://127.0.0.1:5984/Document'),
+     ('Tania.Droit', 'http://127.0.0.1:5984/Droit'),
+     ('Tania.Item', 'http://127.0.0.1:5984/Item'),
+     ('Tania.Lien', 'http://127.0.0.1:5984/Lien'),
+     ('Tania.Notation', 'http://127.0.0.1:5984/Notation'),
+     ('Tania.Page', 'http://127.0.0.1:5984/Page'),
+     ('Tania.Presentation', 'http://127.0.0.1:5984/Presentation'),
+     ('Tania.Pret', 'http://127.0.0.1:5984/Pret'),
+     ('Tania.Tag', 'http://127.0.0.1:5984/Tag'),
+     ('Tania.Texte', 'http://127.0.0.1:5984/Texte'),
+     ('Tania.Tips', 'http://127.0.0.1:5984/Tips'),
+     ('Tania.Todo', 'http://127.0.0.1:5984/Todo'),
+     ('Tania.Utilisateur', 'http://127.0.0.1:5984/Utilisateur'),
+     
+ )
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,18 +137,22 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'budget',
-    'date',
-    'note',
-    'tag',
-    'texte',
-    'todo',
-    'utilisateur',
-    'page',
-    'south',
-    'presentation',
-    'lien',
-    'visibilite',
+    'couchdbkit.ext.django',
+     'Tania.Budget', 
+     'Tania.Calendar', 
+     'Tania.Document', 
+     'Tania.Droit', 
+     'Tania.Item', 
+     'Tania.Lien', 
+     'Tania.Notation', 
+     'Tania.Page', 
+     'Tania.Presentation',
+     'Tania.Pret', 
+     'Tania.Tag', 
+     'Tania.Texte', 
+     'Tania.Tips', 
+     'Tania.Todo', 
+     'Tania.Utilisateur', 
     
     
 )

@@ -1,9 +1,3 @@
-from django.db import models
-
-
-
-
-from django.db import models
 from datetime import datetime
 from django.db import models
 
@@ -118,5 +112,6 @@ class Contact(Document):
     Creation = DateTimeProperty(default=datetime.utcnow)
     Email = ListProperty()
     Telephone = ListProperty()
-    Horaire = ListProperty()
+    Ouverture = ListProperty()
+    Notation = ListProperty()
 # Create your models here.

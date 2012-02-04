@@ -1,92 +1,28 @@
+from datetime import datetime
 from django.db import models
 
+from couchdbkit.ext.django.schema import *
 
-
-
-
-
-
-# Create your models here.
-
-
-
-
-
-
-
-class CategorieLien(models.Model):
-
-
-
-    Nom = models.CharField(max_length=200,null=True,blank=True)
-
-
-
-
-    Visibilite = models.ManyToManyField('visibilite.Visibilite',related_name='Categorie_Lien_Visibilite_Visibilite',null=True,blank=True)
-
+class CategorieLien(Document):
+    Nom =  StringProperty()
+    Visibilite = ListProperty()
 
 
 class Lien(models.Model):
-
-
-
-    Categorie = models.ManyToManyField(CategorieLien,null=True,blank=True)
-
-
-
-    Nom = models.CharField(max_length=200,null=True,blank=True)
-
-
-
-    url = models.CharField(max_length=500,null=True,blank=True)
-
-
-
-    alt = models.CharField(max_length=400,null=True,blank=True)
-
-
-
-    Texte_contenu = models.ManyToManyField('presentation.Texte_contenu',related_name='Lien_Texte_contenu_presentation_Texte_contenu',null=True,blank=True)
-
-
-
-    MiseEnForme = models.ManyToManyField('presentation.MiseEnForme',related_name='Lien_MiseEnForme_presentation_MiseEnForme',null=True,blank=True)
-
-
-
-    Visibilite = models.ManyToManyField('visibilite.Visibilite',related_name='Lien_Visibilite_Visibilite',null=True,blank=True)
-
-
-
-
-
-
-
-
-
-
+    Categorie = ListProperty()
+    Note = ListProperty()
+    Tags = ListProperty()
+    Nom = StringProperty()
+    url = StringProperty()
+    alt = StringProperty()
+    Texte_contenu = StringProperty()
+    MiseEnForme = StringProperty()
+    Visibilite = ListProperty()
 
 class LienFacebook(models.Model):
-
-
-
-    LienFacaebook = models.ManyToManyField(Lien,null=True,blank=True)
-
-
-
-
-
-
+    LienFacaebook = ListProperty()
 
 class LienTwitter(models.Model):
+    LienTwitter = ListProperty()
 
 
-
-    LienTwitter = models.ManyToManyField(Lien,null=True,blank=True)
-
-
-
-
-class Admin:
-    pass

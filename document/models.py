@@ -5,6 +5,10 @@ from datetime import datetime
 from django.db import models
 from couchdbkit.ext.django.schema import *
 
+class Partage(Document):
+    Proprietaire = ListProperty()
+    Emprunteur = ListProperty()
+    
 class TypeFile(Document):
     Nom = StringProperty(required=True)
     Tags = ListProperty()
@@ -30,10 +34,12 @@ class File(Document):
     TypeFile = ListProperty()
     Base64 = StringProperty()
     Extension = StringProperty()
+    Droit = StringProperty()
     DateCreation = ListProperty()
     DateModification = ListProperty()
     Proprietaire = ListProperty()
-     
+    Visibilite = ListProperty()
+    Pegi = ListProperty()
     
 class ImageFile(Document):
     File = ListProperty()
@@ -56,5 +62,10 @@ class Texte(Document):
     Contenu = StringProperty()
     
 class Programmation(Document):
+    File = ListProperty()
     Texte = ListProperty()
     Commande = ListProperty()
+    
+class Torrent(Document):
+    File = ListProperty()
+    Liens = ListProperty()

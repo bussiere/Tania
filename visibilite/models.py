@@ -46,11 +46,11 @@ Visible = (
 
 
 
-class Visibilite(models.Model):
-
-
-
-	 Visibilite = models.IntegerField(max_length=2, choices=Visible,blank=True)
+class Visibilite(Document):
+	Proprietaire = ListProperty()
+    Groupe = ListProperty()
+    Droit = ListProperty()
+    Visibilite = IntegerProperty()
 
 
 class Admin:

@@ -10,8 +10,19 @@ class HoraireDebut(Document):
     Heure = ListProperty()
     Horaire = ListProperty()
 
+class Evenement(Document):
+    Organisateur = ListProperty()
+    Invite = ListProperty()
+    Ouverture = ListProperty()
+    Note = ListProperty()
+    Texte = ListProperty()
+    Liens = ListProperty()
+    Adresse = ListProperty()
+    Visibilite = ListProperty()
+    PEGI = ListProperty()
+    Tags = ListProperty()
 
-class HoraireFin(models.Model):
+class HoraireFin(Document):
     Minute = ListProperty()
     Heure = ListProperty()
 

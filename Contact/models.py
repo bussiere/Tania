@@ -76,6 +76,7 @@ class Pays(Document):
     Metro = ListProperty()
     GpsLiens =  ListProperty()
     GeoHash = ListProperty()  
+    Langues = ListProperty()  
   
 class Adresse(Document):
     Nom = StringProperty(required=True)

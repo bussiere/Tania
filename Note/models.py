@@ -2,19 +2,17 @@ from datetime import datetime
 from django.db import models
 
 from couchdbkit.ext.django.schema import *
-# Create your models here.
-class Tag(Document):
+        
+class Note(Document):
     Nom = StringProperty(required=True)
     Creation = DateTimeProperty(default=datetime.utcnow)
-    def ___str__(self):
-    	return self.Nom
-    def __unicode__(self):
-        return self.Nom
-
-class FamilleTag(Document):
-    Nom = StringProperty(required=True)
+    Texte = StringProperty(required=True)
     Tags = ListProperty()
+    Membre = ListProperty()
+    Lien = ListProperty()
     def ___str__(self):
-    	return self.Nom
+        return self.Nom
     def __unicode__(self):
         return self.Nom
+   
+   

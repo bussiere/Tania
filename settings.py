@@ -109,21 +109,21 @@ TEMPLATE_DIRS = (
 )
 
 COUCHDB_DATABASES = (
-     ('Tania.Budget', 'http://127.0.0.1:5984/Budget'),
-     ('Tania.Calendar', 'http://127.0.0.1:5984/Calendar'),
-     ('Tania.Document', 'http://127.0.0.1:5984/Document'),
-     ('Tania.Droit', 'http://127.0.0.1:5984/Droit'),
-     ('Tania.Item', 'http://127.0.0.1:5984/Item'),
-     ('Tania.Lien', 'http://127.0.0.1:5984/Lien'),
-     ('Tania.Notation', 'http://127.0.0.1:5984/Notation'),
-     ('Tania.Page', 'http://127.0.0.1:5984/Page'),
-     ('Tania.Presentation', 'http://127.0.0.1:5984/Presentation'),
-     ('Tania.Pret', 'http://127.0.0.1:5984/Pret'),
-     ('Tania.Tag', 'http://127.0.0.1:5984/Tag'),
-     ('Tania.Texte', 'http://127.0.0.1:5984/Texte'),
-     ('Tania.Tips', 'http://127.0.0.1:5984/Tips'),
-     ('Tania.Todo', 'http://127.0.0.1:5984/Todo'),
-     ('Tania.Utilisateur', 'http://127.0.0.1:5984/Utilisateur'),
+     ('Tania.Budget', 'http://127.0.0.1:5984/budget'),
+     ('Tania.Calendar', 'http://127.0.0.1:5984/calendar'),
+     ('Tania.Document', 'http://127.0.0.1:5984/document'),
+     ('Tania.Droit', 'http://127.0.0.1:5984/droit'),
+     ('Tania.Item', 'http://127.0.0.1:5984/item'),
+     ('Tania.Lien', 'http://127.0.0.1:5984/lien'),
+     ('Tania.Notation', 'http://127.0.0.1:5984/notation'),
+     ('Tania.Page', 'http://127.0.0.1:5984/page'),
+     ('Tania.Presentation', 'http://127.0.0.1:5984/presentation'),
+     ('Tania.Pret', 'http://127.0.0.1:5984/pret'),
+     ('Tania.Tag', 'http://127.0.0.1:5984/tag'),
+     ('Tania.Texte', 'http://127.0.0.1:5984/texte'),
+     ('Tania.Tips', 'http://127.0.0.1:5984/tips'),
+     ('Tania.Todo', 'http://127.0.0.1:5984/todo'),
+     ('Tania.Utilisateur', 'http://127.0.0.1:5984/utilisateur'),
      
  )
 INSTALLED_APPS = (

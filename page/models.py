@@ -12,7 +12,7 @@ class Categorie_Page(models.Model):
 
 class Template(models.Model):
 	Nom = StringProperty(required=True)
-	contenu = Nom = StringProperty(required=True)
+	contenu = StringProperty(required=True)
 	def ___str__(self):
 		return self.Nom
 	def __unicode__(self):
